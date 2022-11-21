@@ -6,9 +6,12 @@ specifiers:
   '@types/react-dom': 18.0.9
   eslint: 8.28.0
   eslint-config-next: 13.0.4
+  i18next: ^22.0.6
   next: 13.0.4
+  next-i18next: ^13.0.0
   react: 18.2.0
   react-dom: 18.2.0
+  react-i18next: ^12.0.0
   typescript: 4.9.3
 
 dependencies:
@@ -17,9 +20,12 @@ dependencies:
   '@types/react-dom': 18.0.9
   eslint: 8.28.0
   eslint-config-next: 13.0.4_hsf322ms6xhhd4b5ne6lb74y4a
+  i18next: 22.0.6
   next: 13.0.4_biqbaboplfbrettd7655fr4n2y
+  next-i18next: 13.0.0_45muwplwdy3pbxlcpjcsuwdrxy
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  react-i18next: 12.0.0_nger6pvrp5hnzeykouhwqmsdti
   typescript: 4.9.3
 
 packages:
@@ -244,6 +250,13 @@ packages:
     resolution: {integrity: sha512-rEUrBSGIoSFuYxwBYtlUFMlE2CwGhmW+w9355/5oduSw8e5h2+Tj4UrAGNNgP9915++wj5vkQo0UuOBqOAq4nw==}
     dependencies:
       tslib: 2.4.1
+    dev: false
+
+  /@types/hoist-non-react-statics/3.3.1:
+    resolution: {integrity: sha512-iMIqiko6ooLrTh1joXodJK5X9xeEALT1kM5G3ZLhD3hszxBdIEd5C75U834D9mLcINgD4OyZf5uQXjkuYydWvA==}
+    dependencies:
+      '@types/react': 18.0.25
+      hoist-non-react-statics: 3.3.2
     dev: false
 
   /@types/json5/0.0.29:
@@ -507,6 +520,11 @@ packages:
 
   /core-js-pure/3.26.1:
     resolution: {integrity: sha512-VVXcDpp/xJ21KdULRq/lXdLzQAtX7+37LzpyfFM973il0tWSsDEoyzG38G14AjTpK9VTfiNM9jnFauq/CpaWGQ==}
+    requiresBuild: true
+    dev: false
+
+  /core-js/3.26.1:
+    resolution: {integrity: sha512-21491RRQVzUn0GGM9Z1Jrpr6PNPxPi+Za8OM9q4tksTSnlbXXGKK1nXNg/QvwFYettXvSX6zWKCtHHfjN4puyA==}
     requiresBuild: true
     dev: false
 
@@ -1161,6 +1179,28 @@ packages:
       function-bind: 1.1.1
     dev: false
 
+  /hoist-non-react-statics/3.3.2:
+    resolution: {integrity: sha512-/gGivxi8JPKWNm/W0jSmzcMPpfpPLc3dY/6GxhX2hQ9iGj3aDfklV4ET7NjKpSinLpJ5vafa9iiGIEZg10SfBw==}
+    dependencies:
+      react-is: 16.13.1
+    dev: false
+
+  /html-parse-stringify/3.0.1:
+    resolution: {integrity: sha512-KknJ50kTInJ7qIScF3jeaFRpMpE8/lfiTdzf/twXyPBLAGrLRTmkz3AdTnKeh40X8k9L2fdYwEp/42WGXIRGcg==}
+    dependencies:
+      void-elements: 3.1.0
+    dev: false
+
+  /i18next-fs-backend/2.0.0:
+    resolution: {integrity: sha512-zlwzcoUKlveoRt/SxgeP8i/6p1rxwxZ+x0w4sfCTY1zgUlhhnoxBSRX3GjVIsDJm5mky8Hpr//UX93UIknK7yQ==}
+    dev: false
+
+  /i18next/22.0.6:
+    resolution: {integrity: sha512-RlreNGoPIdDP4QG+qSA9PxZKGwlzmcozbI9ObI6+OyUa/Rp0EjZZA9ubyBjw887zVNZsC+7FI3sXX8oiTzAfig==}
+    dependencies:
+      '@babel/runtime': 7.20.1
+    dev: false
+
   /ignore/5.2.0:
     resolution: {integrity: sha512-CmxgYGiEPCLhfLnpPp1MoRmifwEIOgjcHXxOBjv7mY96c+eWScsOP9c112ZyLdWHi0FxHjI+4uVhKYp/gcdRmQ==}
     engines: {node: '>= 4'}
@@ -1442,6 +1482,26 @@ packages:
     resolution: {integrity: sha512-OWND8ei3VtNC9h7V60qff3SVobHr996CTwgxubgyQYEpg290h9J0buyECNNJexkFm5sOajh5G116RYA1c8ZMSw==}
     dev: false
 
+  /next-i18next/13.0.0_45muwplwdy3pbxlcpjcsuwdrxy:
+    resolution: {integrity: sha512-XiODAmMdueAIETQKIRPvYEZ5ghLOlzHb6PI4/WzwYkKdC/5q6UROzwIRw7aj3VWRB3xwnuuzEVI9NAjMfXyrkQ==}
+    engines: {node: '>=14'}
+    peerDependencies:
+      i18next: ^22.0.6
+      next: '>= 12.0.0'
+      react: '>= 17.0.2'
+      react-i18next: ^12.0.0
+    dependencies:
+      '@babel/runtime': 7.20.1
+      '@types/hoist-non-react-statics': 3.3.1
+      core-js: 3.26.1
+      hoist-non-react-statics: 3.3.2
+      i18next: 22.0.6
+      i18next-fs-backend: 2.0.0
+      next: 13.0.4_biqbaboplfbrettd7655fr4n2y
+      react: 18.2.0
+      react-i18next: 12.0.0_nger6pvrp5hnzeykouhwqmsdti
+    dev: false
+
   /next/13.0.4_biqbaboplfbrettd7655fr4n2y:
     resolution: {integrity: sha512-4P0MvbjPCI1E/UPL1GrTXtYlgFnbBbY3JQ+AMY8jYE2SwyvCWctEJySoRjveznAHjrl6TIjuAJeB8u1c2StYUQ==}
     engines: {node: '>=14.6.0'}
@@ -1665,6 +1725,26 @@ packages:
       loose-envify: 1.4.0
       react: 18.2.0
       scheduler: 0.23.0
+    dev: false
+
+  /react-i18next/12.0.0_nger6pvrp5hnzeykouhwqmsdti:
+    resolution: {integrity: sha512-/O7N6aIEAl1FaWZBNvhdIo9itvF/MO/nRKr9pYqRc9LhuC1u21SlfwpiYQqvaeNSEW3g3qUXLREOWMt+gxrWbg==}
+    peerDependencies:
+      i18next: '>= 19.0.0'
+      react: '>= 16.8.0'
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      '@babel/runtime': 7.20.1
+      html-parse-stringify: 3.0.1
+      i18next: 22.0.6
+      react: 18.2.0
+      react-dom: 18.2.0_react@18.2.0
     dev: false
 
   /react-is/16.13.1:
@@ -1971,6 +2051,11 @@ packages:
       react: ^16.8.0 || ^17.0.0 || ^18.0.0
     dependencies:
       react: 18.2.0
+    dev: false
+
+  /void-elements/3.1.0:
+    resolution: {integrity: sha512-Dhxzh5HZuiHQhbvTW9AMetFfBHDMYpo23Uo9btPXgdYP+3T5S+p+jgNy7spra+veYhBP2dCSgxR/i2Y02h5/6w==}
+    engines: {node: '>=0.10.0'}
     dev: false
 
   /which-boxed-primitive/1.0.2:
